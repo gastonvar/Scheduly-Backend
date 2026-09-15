@@ -1,6 +1,8 @@
 export const PRICE_STEP = 50;
 export const DISCOUNT_PER_REFERRAL = 10;
 export const MAX_DISCOUNT = 50;
+export const CLASS_DURATION_STEP_HOURS = 0.25;
+export const MIN_CLASS_DURATION_HOURS = 0.25;
 
 export const CONTACT_TYPES = ['Email', 'Phone', 'WhatsApp', 'Discord'] as const;
 export type ContactType = (typeof CONTACT_TYPES)[number];

@@ -46,8 +46,11 @@ export function initClassSessionModel(sequelize: Sequelize): typeof ClassSession
         allowNull: false,
       },
       durationHours: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DECIMAL(6, 2),
         allowNull: false,
+        get() {
+          return Number(this.getDataValue('durationHours'));
+        },
       },
       subjectId: {
         type: DataTypes.UUID,

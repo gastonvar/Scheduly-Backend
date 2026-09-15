@@ -24,6 +24,19 @@ describe('computeClassPrice', () => {
       finalPrice: 1100,
     });
   });
+
+  it('prices quarter-hour durations without rounding up to a full hour', () => {
+    expect(computeClassPrice({ pricePerHour: 400 }, 0.25, 0)).toEqual({
+      basePrice: 100,
+      surchargePercent: 0,
+      finalPrice: 100,
+    });
+    expect(computeClassPrice({ pricePerHour: 400 }, 1.5, 0)).toEqual({
+      basePrice: 600,
+      surchargePercent: 0,
+      finalPrice: 600,
+    });
+  });
 });
 
 describe('computeClassTotals', () => {

@@ -19,7 +19,7 @@ export function toPublicClass(classSession: ClassSession): PublicClass {
   return {
     id: classSession.id,
     date: classSession.date.toISOString(),
-    durationHours: classSession.durationHours,
+    durationHours: Number(classSession.durationHours),
     subjectId: classSession.subjectId,
     attendees: attendees.map((row) => row.studentId),
     paymentStatus: classSession.paymentStatus,

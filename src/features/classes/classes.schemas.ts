@@ -1,5 +1,9 @@
 import { z } from 'zod';
-import { CLASS_PAYMENT_STATUSES } from '../../shared/constants.js';
+import {
+  CLASS_DURATION_STEP_HOURS,
+  CLASS_PAYMENT_STATUSES,
+  MIN_CLASS_DURATION_HOURS,
+} from '../../shared/constants.js';
 import { idParams } from '../../shared/schemas.js';
 
 export const classIdParamsSchema = idParams('classId');
@@ -13,9 +17,24 @@ const attendeeIdsSchema = z
   .min(1)
   .transform((ids) => [...new Set(ids)]);
 
+function isQuarterHourDuration(value: number): boolean {
+  const minutes = value * 60;
+  const roundedMinutes = Math.round(minutes);
+  return (
+    Number.isFinite(value) &&
+    value >= MIN_CLASS_DURATION_HOURS &&
+    Math.abs(minutes - roundedMinutes) < 1e-6 &&
+    roundedMinutes % (CLASS_DURATION_STEP_HOURS * 60) === 0
+  );
+}
+
+const durationHoursSchema = z.number().refine(isQuarterHourDuration, {
+  message: 'durationHours must be a multiple of 15 minutes',
+});
+
 export const createClassBodySchema = z.object({
   date: isoDateSchema,
-  durationHours: z.number().int().min(1),
+  durationHours: durationHoursSchema,
   subjectId: z.string().uuid(),
   attendees: attendeeIdsSchema,
   paymentStatus: z.enum(CLASS_PAYMENT_STATUSES).optional().default('unpaid'),
@@ -25,7 +44,7 @@ export const createClassBodySchema = z.object({
 export const updateClassBodySchema = z
   .object({
     date: isoDateSchema.optional(),
-    durationHours: z.number().int().min(1).optional(),
+    durationHours: durationHoursSchema.optional(),
     subjectId: z.string().uuid().optional(),
     attendees: attendeeIdsSchema.optional(),
     paymentStatus: z.enum(CLASS_PAYMENT_STATUSES).optional(),

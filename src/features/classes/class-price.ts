@@ -1,4 +1,4 @@
-import { PRICE_STEP } from '../../shared/constants.js';
+import { MIN_CLASS_DURATION_HOURS, PRICE_STEP } from '../../shared/constants.js';
 import { applyDiscount } from '../students/discounts.js';
 
 export type ClassUnitPrice = {
@@ -17,7 +17,7 @@ export function computeClassPrice(
   durationHours: number,
   surchargePercent: number,
 ): ClassUnitPrice {
-  const safeDuration = Math.max(1, durationHours);
+  const safeDuration = Math.max(MIN_CLASS_DURATION_HOURS, durationHours);
   const safeSurcharge = Math.max(0, surchargePercent);
   const basePrice = subject.pricePerHour * safeDuration;
   const finalPrice = basePrice * (1 + safeSurcharge / 100);
