@@ -1,5 +1,6 @@
 import { randomUUID } from 'node:crypto';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
+import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { hashPassword } from '../lib/crypto.js';
 import { pinoLogger } from '../lib/pino.js';
@@ -67,8 +68,23 @@ function isPaymentStatus(value: string): value is ClassPaymentStatus {
 }
 
 function loadSeedFile(): SeedFile {
-  const path = fileURLToPath(new URL('./seed-data.json', import.meta.url));
-  return JSON.parse(readFileSync(path, 'utf8')) as SeedFile;
+  const here = path.dirname(fileURLToPath(import.meta.url));
+  const workspaceDb = path.resolve(here, '../../../db/db.json');
+  const bundled = path.join(here, 'seed-data.json');
+  const source = existsSync(workspaceDb) ? workspaceDb : bundled;
+  pinoLogger.info({ source }, 'Loading seed data');
+  return JSON.parse(readFileSync(source, 'utf8')) as SeedFile;
+}
+
+async function clearDomainData(): Promise<void> {
+  await sequelize.transaction(async (transaction) => {
+    await ClassAttendee.destroy({ where: {}, transaction });
+    await ClassSession.destroy({ where: {}, transaction });
+    await StudentContact.destroy({ where: {}, transaction });
+    await Student.update({ referredById: null }, { where: {}, transaction });
+    await Student.destroy({ where: {}, transaction });
+    await Subject.destroy({ where: {}, transaction });
+  });
 }
 
 async function seedDomainData(): Promise<void> {
@@ -167,12 +183,7 @@ async function seed(): Promise<void> {
     pinoLogger.info({ email: SEED_EMAIL }, 'Seed user already present; skipping user create');
   }
 
-  const studentCount = await Student.count();
-  if (studentCount > 0) {
-    pinoLogger.info('Students already present; skipping domain seed');
-    return;
-  }
-
+  await clearDomainData();
   await seedDomainData();
 }
 
