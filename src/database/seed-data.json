@@ -1,0 +1,431 @@
+{
+  "students": [
+    {
+      "id": "bewMZqtdrx4",
+      "name": "Federico Perez",
+      "contacts": [
+        {
+          "id": "59d56fa6-6041-4d59-9f2f-3923c886a8f1",
+          "type": "Discord",
+          "value": "f.pzm"
+        }
+      ],
+      "referredBy": null,
+      "referrals": [],
+      "discountPercent": 0
+    },
+    {
+      "id": "aae58968-4e81-45c1-86d4-f912df0ae49b",
+      "name": "Emiliano Rodriguez",
+      "contacts": [
+        {
+          "id": "45424954-fbd5-487d-a205-06667e2e47bb",
+          "type": "Phone",
+          "value": "095 646 425"
+        }
+      ],
+      "referredBy": null,
+      "referrals": [],
+      "discountPercent": 0
+    },
+    {
+      "id": "5aeeaeb1-4f40-4d0b-be84-4a072cdc052d",
+      "name": "Valentino Mazzolennii",
+      "contacts": [
+        {
+          "id": "45424954-fbd5-487d-a205-06667e2e47bb",
+          "type": "Phone",
+          "value": "098 515 506"
+        }
+      ],
+      "referredBy": null,
+      "referrals": [],
+      "discountPercent": 0
+    }
+  ],
+  "subjects": [
+    {
+      "id": "lcU3O2WDuM0",
+      "name": "Programación 1",
+      "pricePerHour": 350,
+      "color": "oklch(0.55 0.18 293)"
+    },
+    {
+      "id": "_0lPaNIbUdA",
+      "name": "Diseño web",
+      "pricePerHour": 350,
+      "color": "oklch(0.58 0.16 200)"
+    },
+    {
+      "id": "f1a99feb-d8a8-4867-b1da-28963cbeea23",
+      "name": "Matematica inicial",
+      "pricePerHour": 300,
+      "color": "oklch(0.58 0.19 25)"
+    },
+    {
+      "id": "d0169441-8606-4971-9e62-08a54386c9fd",
+      "name": "Informatica inicial",
+      "pricePerHour": 300,
+      "color": "oklch(0.62 0.17 145)"
+    },
+    {
+      "id": "fb4dd845-c538-4ec6-aeda-a1b6b2e08198",
+      "name": "Programación 2",
+      "pricePerHour": 350,
+      "color": "oklch(0.55 0.15 320)"
+    }
+  ],
+  "classes": [
+    {
+      "id": "hCDC0DKvoFc",
+      "date": "2026-06-16T00:00:00.000Z",
+      "durationHours": 1,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 350,
+      "surchargePercent": 0,
+      "finalPrice": 350,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "uaOeDTgLr4M",
+      "date": "2026-06-17T21:00:00.000Z",
+      "durationHours": 2,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 700,
+      "surchargePercent": 0,
+      "finalPrice": 700,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "L8G9JRUajcM",
+      "date": "2026-06-16T21:00:00.000Z",
+      "durationHours": 2,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 700,
+      "surchargePercent": 0,
+      "finalPrice": 700,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "-wdq7vH8iUM",
+      "date": "2026-06-18T21:00:00.000Z",
+      "durationHours": 2,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 700,
+      "surchargePercent": 0,
+      "finalPrice": 700,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "o2sdBlvtTlA",
+      "date": "2026-06-19T23:00:00.000Z",
+      "durationHours": 1,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 350,
+      "finalPrice": 350,
+      "surchargePercent": 0,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "OiyfOL9AfCM",
+      "date": "2026-06-20T22:30:00.000Z",
+      "durationHours": 2,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 700,
+      "finalPrice": 700,
+      "surchargePercent": 0,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "NP0SGAGSkfw",
+      "date": "2026-06-21T19:30:00.000Z",
+      "durationHours": 2,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 700,
+      "finalPrice": 700,
+      "surchargePercent": 0,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "WslrWKgVLVI",
+      "date": "2026-06-22T18:00:00.000Z",
+      "durationHours": 1,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 350,
+      "finalPrice": 350,
+      "surchargePercent": 0,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "arhglvMBd9I",
+      "date": "2026-06-23T21:00:00.000Z",
+      "durationHours": 3,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 1050,
+      "finalPrice": 1050,
+      "surchargePercent": 0,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "wMbcaj2YHE4",
+      "date": "2026-06-25T19:00:00.000Z",
+      "durationHours": 4,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 1750,
+      "finalPrice": 1750,
+      "surchargePercent": 0,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "It-lcDd2KYw",
+      "date": "2026-06-28T21:00:00.000Z",
+      "durationHours": 2,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 700,
+      "finalPrice": 700,
+      "surchargePercent": 0,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "g_zd9sAjXsI",
+      "date": "2026-06-29T22:30:00.000Z",
+      "durationHours": 2,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 700,
+      "finalPrice": 700,
+      "surchargePercent": 0,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "Pv0zWJscXww",
+      "date": "2026-06-30T19:00:00.000Z",
+      "durationHours": 4,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 1400,
+      "finalPrice": 1400,
+      "surchargePercent": 0,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "YKaEFt-GRvU",
+      "date": "2026-07-03T19:30:00.000Z",
+      "durationHours": 1,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 350,
+      "finalPrice": 350,
+      "surchargePercent": 0,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "v1ez-xmKU3I",
+      "date": "2026-07-02T20:00:00.000Z",
+      "durationHours": 2,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 0,
+      "finalPrice": 0,
+      "surchargePercent": 0,
+      "paymentStatus": "free"
+    },
+    {
+      "id": "e5TEOmb-bJw",
+      "date": "2026-07-05T22:00:00.000Z",
+      "durationHours": 2,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 700,
+      "finalPrice": 700,
+      "surchargePercent": 0,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "Z8IsDHU3yI4",
+      "date": "2026-07-07T21:00:00.000Z",
+      "durationHours": 3,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 1050,
+      "finalPrice": 1050,
+      "surchargePercent": 0,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "Y6ZeywZmV_M",
+      "date": "2026-07-09T22:00:00.000Z",
+      "durationHours": 2,
+      "subjectId": "_0lPaNIbUdA",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "basePrice": 700,
+      "finalPrice": 700,
+      "surchargePercent": 0,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "3ac6b3be-1e50-4c4b-a04e-329569154ad9",
+      "date": "2026-07-11T00:00:00.000Z",
+      "durationHours": 1,
+      "subjectId": "_0lPaNIbUdA",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "paymentStatus": "paid",
+      "basePrice": 350,
+      "finalPrice": 350,
+      "surchargePercent": 0
+    },
+    {
+      "id": "d6fce404-f5d0-42df-a21a-a24cccaa741f",
+      "date": "2026-07-11T18:00:00.000Z",
+      "durationHours": 3,
+      "subjectId": "_0lPaNIbUdA",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "paymentStatus": "unpaid",
+      "basePrice": 1050,
+      "finalPrice": 1050,
+      "surchargePercent": 0
+    },
+    {
+      "id": "e78104a4-1b10-4804-bad2-0f18021afb88",
+      "date": "2026-09-15T18:30:00.000Z",
+      "durationHours": 1,
+      "subjectId": "d0169441-8606-4971-9e62-08a54386c9fd",
+      "attendees": [
+        "aae58968-4e81-45c1-86d4-f912df0ae49b"
+      ],
+      "paymentStatus": "unpaid",
+      "basePrice": 300,
+      "finalPrice": 300,
+      "surchargePercent": 0
+    },
+    {
+      "id": "4bb2729c-5e1d-4ce7-b7e7-dde2ef1b5e93",
+      "date": "2026-09-15T20:00:00.000Z",
+      "durationHours": 1,
+      "subjectId": "f1a99feb-d8a8-4867-b1da-28963cbeea23",
+      "attendees": [
+        "5aeeaeb1-4f40-4d0b-be84-4a072cdc052d"
+      ],
+      "paymentStatus": "unpaid",
+      "basePrice": 300,
+      "finalPrice": 300,
+      "surchargePercent": 0
+    },
+    {
+      "id": "3368c1dc-8f42-45c3-8a0e-3672e98fcf98",
+      "date": "2026-09-17T19:00:00.000Z",
+      "durationHours": 1,
+      "subjectId": "f1a99feb-d8a8-4867-b1da-28963cbeea23",
+      "attendees": [
+        "5aeeaeb1-4f40-4d0b-be84-4a072cdc052d"
+      ],
+      "paymentStatus": "unpaid",
+      "basePrice": 300,
+      "finalPrice": 300,
+      "surchargePercent": 0
+    },
+    {
+      "id": "ffca678f-1a11-4cf5-8bfd-1ab6ee6ac356",
+      "date": "2026-09-14T21:00:00.000Z",
+      "durationHours": 2,
+      "subjectId": "lcU3O2WDuM0",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "paymentStatus": "paid",
+      "basePrice": 700,
+      "finalPrice": 700,
+      "surchargePercent": 0
+    },
+    {
+      "id": "ec88d0ab-2f62-4f57-9108-f7e57c7acc7b",
+      "date": "2026-09-08T20:00:00.000Z",
+      "durationHours": 2,
+      "subjectId": "fb4dd845-c538-4ec6-aeda-a1b6b2e08198",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "paymentStatus": "paid",
+      "basePrice": 700,
+      "finalPrice": 700,
+      "surchargePercent": 0
+    },
+    {
+      "id": "99b62dca-77ff-4ec5-b023-3bb4b86e3521",
+      "date": "2026-09-11T20:00:00.000Z",
+      "durationHours": 1,
+      "subjectId": "fb4dd845-c538-4ec6-aeda-a1b6b2e08198",
+      "attendees": [
+        "bewMZqtdrx4"
+      ],
+      "paymentStatus": "paid",
+      "basePrice": 350,
+      "finalPrice": 350,
+      "surchargePercent": 0
+    },
+    {
+      "id": "379a3ca9-07b1-4caa-9913-81c24a79b75b",
+      "date": "2026-09-08T18:30:00.000Z",
+      "durationHours": 1,
+      "subjectId": "d0169441-8606-4971-9e62-08a54386c9fd",
+      "attendees": [
+        "aae58968-4e81-45c1-86d4-f912df0ae49b"
+      ],
+      "paymentStatus": "paid",
+      "basePrice": 300,
+      "finalPrice": 300,
+      "surchargePercent": 0
+    }
+  ]
+}

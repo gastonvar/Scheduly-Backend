@@ -1,0 +1,24 @@
+name: scheduly
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: scheduly-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: scheduly
+      POSTGRES_PASSWORD: scheduly
+      POSTGRES_DB: scheduly
+    ports:
+      - '5434:5432'
+    volumes:
+      - scheduly_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U scheduly -d scheduly']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  scheduly_pg_data:
+    name: scheduly_pg_data

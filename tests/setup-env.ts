@@ -1,0 +1,9 @@
+process.env.NODE_ENV ??= 'test';
+process.env.DATABASE_URL ??= 'postgres://scheduly:scheduly@localhost:5434/scheduly';
+process.env.FRONTEND_ORIGIN ??= 'http://localhost:5173';
+process.env.SESSION_SECRET ??= 'test-session-secret-value-32chars!';
+process.env.COOKIE_SECURE ??= 'false';
+process.env.COOKIE_SAMESITE ??= 'lax';
+process.env.LOG_LEVEL ??= 'silent';
+process.env.PORT ??= '4001';
+process.env.APP_TIMEZONE ??= 'America/Montevideo';
