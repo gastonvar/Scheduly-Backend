@@ -87,7 +87,7 @@ async function clearDomainData(): Promise<void> {
   });
 }
 
-async function seedDomainData(): Promise<void> {
+export async function seedDomainData(): Promise<void> {
   const seed = loadSeedFile();
   const idMap = new Map<string, string>();
 
@@ -187,11 +187,14 @@ async function seed(): Promise<void> {
   await seedDomainData();
 }
 
-seed()
-  .catch((error: unknown) => {
-    pinoLogger.error({ err: error }, 'Seed failed');
-    process.exitCode = 1;
-  })
-  .finally(async () => {
-    await sequelize.close();
-  });
+const entrypoint = process.argv[1];
+if (entrypoint && fileURLToPath(import.meta.url) === path.resolve(entrypoint)) {
+  seed()
+    .catch((error: unknown) => {
+      pinoLogger.error({ err: error }, 'Seed failed');
+      process.exitCode = 1;
+    })
+    .finally(async () => {
+      await sequelize.close();
+    });
+}
